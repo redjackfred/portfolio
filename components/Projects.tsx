@@ -12,8 +12,8 @@ const PROJECTS = [
     description:
       "Polyglot system combining a Go API Gateway with Python FastAPI workers to eliminate redundant LLM calls. Consistent hashing (FNV-1a, 150 virtual nodes) pins same-context requests to the same worker; Redis Stack HNSW index catches semantically similar queries at cosine similarity ≥ 0.8. Achieves 7× latency reduction on cache hits (~25 ms vs ~180 ms).",
     tech: ["Go", "Python", "FastAPI", "Redis Stack", "Docker", "Vector Search"],
-    href: "https://github.com/Peiwen-Tang/semantic-cache-router",
-    repo: "https://github.com/Peiwen-Tang/semantic-cache-router",
+    href: "https://github.com/redjackfred/distributed-semantic-cache-and-stateful-routing-system",
+    repo: "https://github.com/redjackfred/distributed-semantic-cache-and-stateful-routing-system",
     featured: false,
     gradient: "from-teal-600/10 to-emerald-600/10",
   },
