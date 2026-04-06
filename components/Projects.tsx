@@ -8,6 +8,16 @@ import { cn } from "@/components/ui/cn"
 
 const PROJECTS = [
   {
+    title: "Knitting Pattern Highlighter",
+    description:
+      "A focused web tool for knitters — upload a pattern image, draw a crop selection over the stitch grid, set the total row count, and navigate row-by-row with arrow keys. A yellow overlay tracks the active row with bottom-up numbering. Supports clipboard paste (Ctrl+V) for instant image loading.",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    href: "https://knit.peiwen.dev",
+    repo: "https://github.com/redjackfred/pattern-highlighter",
+    featured: false,
+    gradient: "from-pink-600/10 to-rose-600/10",
+  },
+  {
     title: "Distributed Semantic Cache & Stateful Routing",
     description:
       "Polyglot system combining a Go API Gateway with Python FastAPI workers to eliminate redundant LLM calls. Consistent hashing (FNV-1a, 150 virtual nodes) pins same-context requests to the same worker; Redis Stack HNSW index catches semantically similar queries at cosine similarity ≥ 0.8. Achieves 7× latency reduction on cache hits (~25 ms vs ~180 ms).",
