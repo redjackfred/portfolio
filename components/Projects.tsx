@@ -8,6 +8,26 @@ import { cn } from "@/components/ui/cn"
 
 const PROJECTS = [
   {
+    title: "Distributed Semantic Cache & Stateful Routing",
+    description:
+      "Polyglot system combining a Go API Gateway with Python FastAPI workers to eliminate redundant LLM calls. Consistent hashing (FNV-1a, 150 virtual nodes) pins same-context requests to the same worker; Redis Stack HNSW index catches semantically similar queries at cosine similarity ≥ 0.8. Achieves 7× latency reduction on cache hits (~25 ms vs ~180 ms).",
+    tech: ["Go", "Python", "FastAPI", "Redis Stack", "Docker", "Vector Search"],
+    href: "https://github.com/Peiwen-Tang/semantic-cache-router",
+    repo: "https://github.com/Peiwen-Tang/semantic-cache-router",
+    featured: false,
+    gradient: "from-teal-600/10 to-emerald-600/10",
+  },
+  {
+    title: "PTChat",
+    description:
+      "Self-hosted AI chat app with per-session provider switching across OpenAI, Anthropic Claude, Gemini, and local Ollama. Image RAG powered by GPT-4o-mini vision + PostgreSQL pgvector — photos and diagrams are semantically searchable like text. API keys live in the OS keyring, never plain text.",
+    tech: ["Next.js", "FastAPI", "PostgreSQL", "pgvector", "TypeScript", "SSE"],
+    href: "https://github.com/redjackfred/ptchat",
+    repo: "https://github.com/redjackfred/ptchat",
+    featured: false,
+    gradient: "from-sky-600/10 to-indigo-600/10",
+  },
+  {
     title: "Distributed File System",
     description:
       "A fault-tolerant DFS with separate control and data planes. Uses custom TCP Length-Prefixed Framing, Protocol Buffers, and Go Goroutines for parallel chunk retrieval. Features Consistent Hashing, heartbeat-based failure detection, Read Repair, and Pipeline Replication with tunable consistency.",
