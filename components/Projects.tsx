@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useRef } from "react"
 import { motion } from "motion/react"
 import { useInView } from "motion/react"
@@ -14,6 +15,9 @@ const PROJECTS = [
     tech: ["React", "TypeScript", "Vite", "NOAA SWPC API"],
     href: "https://geomagnetic-monitor.peiwen.dev",
     repo: "https://github.com/redjackfred/Geomagnetic-Monitor",
+    image: "/projects/geomagnetic-monitor.png",
+    imageAlt:
+      "Geomagnetic Monitor dashboard showing live Kp index, G-scale severity, and NOAA space weather data",
     featured: false,
     gradient: "from-violet-600/10 to-sky-600/10",
   },
@@ -24,6 +28,9 @@ const PROJECTS = [
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     href: "https://knit.peiwen.dev",
     repo: "https://github.com/redjackfred/pattern-highlighter",
+    image: "/projects/knitting-pattern-highlighter.png",
+    imageAlt:
+      "Knitting Pattern Highlighter showing a PDF pattern viewer alongside a row-by-row stitch grid highlighter",
     featured: false,
     gradient: "from-pink-600/10 to-rose-600/10",
   },
@@ -140,6 +147,27 @@ function ProjectCard({
           <span className="mb-4 inline-block rounded-full border border-indigo-500/20 bg-indigo-600/20 px-3 py-0.5 text-xs font-medium text-indigo-300">
             Featured
           </span>
+        )}
+
+        {"image" in project && project.image && (
+          <a
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="-mx-6 -mt-6 mb-5 block overflow-hidden border-b border-white/[0.06] transition-opacity hover:opacity-90"
+          >
+            <Image
+              src={project.image}
+              alt={
+                "imageAlt" in project && project.imageAlt
+                  ? project.imageAlt
+                  : `${project.title} screenshot`
+              }
+              width={1024}
+              height={534}
+              className="h-auto w-full object-cover object-top"
+            />
+          </a>
         )}
 
         <h3 className="text-xl font-bold text-white">{project.title}</h3>
