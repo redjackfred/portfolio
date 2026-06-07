@@ -8,6 +8,16 @@ import { cn } from "@/components/ui/cn"
 
 const PROJECTS = [
   {
+    title: "Geomagnetic Monitor",
+    description:
+      "A real-time geomagnetic storm dashboard that ingests live NOAA SWPC data and visualizes Kp indices, G-scale severity, aurora visibility, and solar activity. Features 1-minute sparklines, 3-day Kp forecasts, NOAA geomagnetic alerts, and plain-language impact summaries — covering infrastructure effects and physical/mental notes for people. Bilingual UI (English / zh-TW) with 60-second auto-refresh.",
+    tech: ["React", "TypeScript", "Vite", "NOAA SWPC API"],
+    href: "https://geomagnetic-monitor.peiwen.dev",
+    repo: "https://github.com/redjackfred/Geomagnetic-Monitor",
+    featured: false,
+    gradient: "from-violet-600/10 to-sky-600/10",
+  },
+  {
     title: "Knitting Pattern Highlighter",
     description:
       "A focused web tool for knitters — upload a pattern image, draw a crop selection over the stitch grid, set the total row count, and navigate row-by-row with arrow keys. A yellow overlay tracks the active row with bottom-up numbering. Supports clipboard paste (Ctrl+V) for instant image loading.",
@@ -190,7 +200,8 @@ export default function Projects() {
           Selected <span className="gradient-text">Projects</span>
         </h2>
         <p className="mb-16 text-center text-slate-500">
-          From distributed systems to AI/CV pipelines and full-stack web apps.
+          From distributed systems and AI/CV pipelines to real-time data
+          dashboards and full-stack web apps.
         </p>
 
         <div className="grid gap-5 md:grid-cols-2">
