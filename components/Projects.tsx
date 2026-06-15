@@ -35,6 +35,19 @@ const PROJECTS = [
     gradient: "from-pink-600/10 to-rose-600/10",
   },
   {
+    title: "Dolomites Travel Handbook",
+    description:
+      "A richly illustrated 18-day travel handbook for a four-person summer route through Venice, Slovenia, the Dolomites, Innsbruck, Verona, and Milan. Day-by-day chapters cover transit, lodging, and local context; an interactive route map highlights each stop; departure prep and flexible pacing notes are woven throughout. Written in Traditional Chinese as a shareable trip companion site.",
+    tech: ["HTML", "CSS", "Python", "Static Site"],
+    href: "https://it-travel.peiwen.dev",
+    repo: "https://github.com/redjackfred/it-travel",
+    image: "/projects/it-travel.png",
+    imageAlt:
+      "Dolomites Travel Handbook hero page with itinerary sidebar and mountain landscape",
+    featured: false,
+    gradient: "from-amber-600/10 to-orange-600/10",
+  },
+  {
     title: "Distributed Semantic Cache & Stateful Routing",
     description:
       "Polyglot system combining a Go API Gateway with Python FastAPI workers to eliminate redundant LLM calls. Consistent hashing (FNV-1a, 150 virtual nodes) pins same-context requests to the same worker; Redis Stack HNSW index catches semantically similar queries at cosine similarity ≥ 0.8. Achieves 7× latency reduction on cache hits (~25 ms vs ~180 ms).",
